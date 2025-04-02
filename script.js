@@ -107,3 +107,10 @@ function showResults() {
     scoreDisplay.textContent = `You scored ${score} points!`;
     discountOffer.textContent = discount;
 }
+// Event listeners must be at the END of the file
+startButton.addEventListener('click', startGame);
+nextButton.addEventListener('click', () => {
+  currentQuestionIndex++;
+  setNextQuestion();
+});
+restartButton.addEventListener('click', startGame);
